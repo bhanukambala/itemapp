@@ -36,12 +36,12 @@ public class Item {
 	        return id;
 	    }
 	@Override
-    public boolean equals(Object arg) {
-        if (this == arg) return true;
-        if (arg == null || getClass() != arg.getClass()) {
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) {
             return false;
         }
-        Item that = (Item) arg;
+        Item that = (Item) object;
         return id == that.id;
     }
 

@@ -15,10 +15,10 @@ public class ItemDaoImpl implements IItemDao{
     private EntityManager entityManager;
 
     @Override
-    public Item findItemById(int idArg) {
-        Item item=entityManager.find(Item.class,idArg);
+    public Item findItemById(int id) {
+        Item item=entityManager.find(Item.class,id);
         if(item==null){
-            throw new ItemNotFoundException("Item not found for id="+idArg);
+            throw new ItemNotFoundException("Item not found for id="+id);
         }
         return item;
     }
